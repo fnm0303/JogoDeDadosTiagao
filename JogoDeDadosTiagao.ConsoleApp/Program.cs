@@ -2,6 +2,55 @@
 
 class Program
 {
+    static void Main(string[] args)
+    {
+        const int limiteLinhaChegada = 30;
+        const int bonusAvancoExtra = 3;
+        const int penalidadeRecuo = 2;
+
+        while (true)
+        {
+            int posicaoJogador = 0;
+            int posicaoComputador = 0;
+            Console.Clear();
+
+            while (true)
+            {
+                //1. Rodada do Jogador
+                posicaoJogador = ExecutarRodadaDoJogador( //posicaoJogador está recebendo o retorno desse método
+                    posicaoJogador,
+                    limiteLinhaChegada,
+                    bonusAvancoExtra,
+                    penalidadeRecuo); //execuntado o método
+
+
+                //2. Check de vitória do jogador
+                ApresentarMensagemJogador(posicaoJogador, limiteLinhaChegada);
+
+                if (posicaoJogador >= limiteLinhaChegada)
+                    break;
+
+                //3. Rodada do Computador
+                posicaoComputador = ExecutarRodadaDoComputador(
+                    posicaoComputador,
+                    limiteLinhaChegada,
+                    bonusAvancoExtra,
+                    penalidadeRecuo);
+
+                //4. Check vitória do computador
+                ApresentarMensagemComputador(posicaoComputador, limiteLinhaChegada);
+                if (posicaoComputador >= limiteLinhaChegada)
+                    break;
+            }
+
+            Console.Write("Deseja continuar? s/N");
+            string? opcaoContinuar = Console.ReadLine()?.ToUpper(); //avisando ao compilador que a variável pode ser nula
+
+            if (opcaoContinuar != "S")
+                break;
+        }
+    }
+
     //definindo um método chamado ExecutarRodadaDoJogador
     static int ExecutarRodadaDoJogador( //método void não retorna nada
         int posicaoJogador,
@@ -46,12 +95,33 @@ class Program
     }
     //método de ponto de entrada
 
+    static void ApresentarMensagemJogador(
+        int posicaoJogador,
+        int limiteLinhaChegada
+        )
+    {
+        if (posicaoJogador >= limiteLinhaChegada)
+        {
+            Console.WriteLine($"Parabéns! Você alcançou a linha de chegada.");
+            Console.WriteLine("------------------------");
+            Console.WriteLine("Pressione ENTER para continuar...");
+            Console.ReadLine();
+        }
+        else
+        {
+            Console.WriteLine("------------------------");
+            Console.WriteLine("Pressione ENTER para continuar...");
+            Console.ReadLine();
+        }
+
+    }
+
     static int ExecutarRodadaDoComputador(
-        int posicaoComputador,
-        int limiteLinhaChegada,
-        int bonusAvancoExtra,
-        int penalidadeRecuo
-    )
+         int posicaoComputador,
+         int limiteLinhaChegada,
+         int bonusAvancoExtra,
+         int penalidadeRecuo
+        )
     {
         //Console.Clear();
         Console.WriteLine("------------------------");
@@ -91,63 +161,24 @@ class Program
         }
         return posicaoComputador;
     }
-    static void Main(string[] args)
+
+    static void ApresentarMensagemComputador(
+        int posicaoComputador,
+        int limiteLinhaChegada
+        )
     {
-        const int limiteLinhaChegada = 30;
-        const int bonusAvancoExtra = 3;
-        const int penalidadeRecuo = 2;
-
-        while (true)
+        if (posicaoComputador >= limiteLinhaChegada)
         {
-            int posicaoJogador = 0;
-            int posicaoComputador = 0;
-            Console.Clear();
-
-            while (true)
-            {
-                //1. Rodada do Jogador
-                posicaoJogador = ExecutarRodadaDoJogador( //posicaoJogador está recebendo o retorno desse método
-                    posicaoJogador,
-                    limiteLinhaChegada,
-                    bonusAvancoExtra,
-                    penalidadeRecuo); //execuntado o método
-
-
-                //2. Check de vitória do jogador
-                if (posicaoJogador >= limiteLinhaChegada)
-                {
-                    Console.WriteLine($"Parabéns! Você alcançou a linha de chegada.");
-                    Console.WriteLine("------------------------");
-                    Console.WriteLine("Pressione ENTER para continuar...");
-                    Console.ReadLine();
-
-                    break;
-                }
-
-                //3. Rodada do Computador
-                posicaoComputador = ExecutarRodadaDoComputador(
-                    posicaoComputador,
-                    limiteLinhaChegada,
-                    bonusAvancoExtra,
-                    penalidadeRecuo);
-
-                //4. Check vitória do computador
-                if (posicaoComputador >= limiteLinhaChegada)
-                {
-                    Console.WriteLine($"Pena, você perdeu! O computador alcançou a linha de chegada.");
-                    Console.WriteLine("------------------------");
-                    Console.WriteLine("Pressione ENTER para continuar...");
-                    Console.ReadLine();
-
-                    break;
-                }
-            }
-
-            Console.Write("Deseja continuar? s/N");
-            string? opcaoContinuar = Console.ReadLine()?.ToUpper(); //avisando ao compilador que a variável pode ser nula
-
-            if (opcaoContinuar != "S")
-                break;
+            Console.WriteLine($"Pena, você perdeu! O computador alcançou a linha de chegada.");
+            Console.WriteLine("------------------------");
+            Console.WriteLine("Pressione ENTER para continuar...");
+            Console.ReadLine();
+        }
+        else
+        {
+            Console.WriteLine("------------------------");
+            Console.WriteLine("Pressione ENTER para continuar...");
+            Console.ReadLine();
         }
     }
 
