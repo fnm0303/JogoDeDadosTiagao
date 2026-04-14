@@ -1,0 +1,14 @@
+C:\Users\felip\OneDrive\Documentos\ARQUIVOS FELIPE\PROGRAMAS ACADEMIA DO PROGRAMADOR\JogoDeDadosTiagao\JogoDeDadosTiagao.ConsoleApp\bin\Debug\net10.0\JogoDeDadosTiagao.ConsoleApp.exe
+C:\Users\felip\OneDrive\Documentos\ARQUIVOS FELIPE\PROGRAMAS ACADEMIA DO PROGRAMADOR\JogoDeDadosTiagao\JogoDeDadosTiagao.ConsoleApp\bin\Debug\net10.0\JogoDeDadosTiagao.ConsoleApp.deps.json
+C:\Users\felip\OneDrive\Documentos\ARQUIVOS FELIPE\PROGRAMAS ACADEMIA DO PROGRAMADOR\JogoDeDadosTiagao\JogoDeDadosTiagao.ConsoleApp\bin\Debug\net10.0\JogoDeDadosTiagao.ConsoleApp.runtimeconfig.json
+C:\Users\felip\OneDrive\Documentos\ARQUIVOS FELIPE\PROGRAMAS ACADEMIA DO PROGRAMADOR\JogoDeDadosTiagao\JogoDeDadosTiagao.ConsoleApp\bin\Debug\net10.0\JogoDeDadosTiagao.ConsoleApp.dll
+C:\Users\felip\OneDrive\Documentos\ARQUIVOS FELIPE\PROGRAMAS ACADEMIA DO PROGRAMADOR\JogoDeDadosTiagao\JogoDeDadosTiagao.ConsoleApp\bin\Debug\net10.0\JogoDeDadosTiagao.ConsoleApp.pdb
+C:\Users\felip\OneDrive\Documentos\ARQUIVOS FELIPE\PROGRAMAS ACADEMIA DO PROGRAMADOR\JogoDeDadosTiagao\JogoDeDadosTiagao.ConsoleApp\obj\Debug\net10.0\JogoDeDadosTiagao.ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\felip\OneDrive\Documentos\ARQUIVOS FELIPE\PROGRAMAS ACADEMIA DO PROGRAMADOR\JogoDeDadosTiagao\JogoDeDadosTiagao.ConsoleApp\obj\Debug\net10.0\JogoDeDadosTiagao.ConsoleApp.AssemblyInfoInputs.cache
+C:\Users\felip\OneDrive\Documentos\ARQUIVOS FELIPE\PROGRAMAS ACADEMIA DO PROGRAMADOR\JogoDeDadosTiagao\JogoDeDadosTiagao.ConsoleApp\obj\Debug\net10.0\JogoDeDadosTiagao.ConsoleApp.AssemblyInfo.cs
+C:\Users\felip\OneDrive\Documentos\ARQUIVOS FELIPE\PROGRAMAS ACADEMIA DO PROGRAMADOR\JogoDeDadosTiagao\JogoDeDadosTiagao.ConsoleApp\obj\Debug\net10.0\JogoDeDadosTiagao.ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\felip\OneDrive\Documentos\ARQUIVOS FELIPE\PROGRAMAS ACADEMIA DO PROGRAMADOR\JogoDeDadosTiagao\JogoDeDadosTiagao.ConsoleApp\obj\Debug\net10.0\JogoDeDadosTiagao.ConsoleApp.dll
+C:\Users\felip\OneDrive\Documentos\ARQUIVOS FELIPE\PROGRAMAS ACADEMIA DO PROGRAMADOR\JogoDeDadosTiagao\JogoDeDadosTiagao.ConsoleApp\obj\Debug\net10.0\refint\JogoDeDadosTiagao.ConsoleApp.dll
+C:\Users\felip\OneDrive\Documentos\ARQUIVOS FELIPE\PROGRAMAS ACADEMIA DO PROGRAMADOR\JogoDeDadosTiagao\JogoDeDadosTiagao.ConsoleApp\obj\Debug\net10.0\JogoDeDadosTiagao.ConsoleApp.pdb
+C:\Users\felip\OneDrive\Documentos\ARQUIVOS FELIPE\PROGRAMAS ACADEMIA DO PROGRAMADOR\JogoDeDadosTiagao\JogoDeDadosTiagao.ConsoleApp\obj\Debug\net10.0\JogoDeDadosTiagao.ConsoleApp.genruntimeconfig.cache
+C:\Users\felip\OneDrive\Documentos\ARQUIVOS FELIPE\PROGRAMAS ACADEMIA DO PROGRAMADOR\JogoDeDadosTiagao\JogoDeDadosTiagao.ConsoleApp\obj\Debug\net10.0\ref\JogoDeDadosTiagao.ConsoleApp.dll
