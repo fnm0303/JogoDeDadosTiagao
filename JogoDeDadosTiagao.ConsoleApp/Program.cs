@@ -1,6 +1,5 @@
 ﻿using System.Security.Cryptography;
-
-class Jogador
+public class Jogador
 {
     public static int ExecutarRodada( //método void não retorna nada
         int posicaoJogador,
@@ -69,8 +68,7 @@ class Jogador
     }
 
 }
-
-class Computador
+public class Computador
 {
     public static int ExecutarRodada(
              int posicaoComputador,
