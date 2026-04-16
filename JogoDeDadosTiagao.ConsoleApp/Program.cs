@@ -1,58 +1,8 @@
 ﻿using System.Security.Cryptography;
 
-class Program
+class Jogador
 {
-    static void Main(string[] args)
-    {
-        const int limiteLinhaChegada = 30;
-        const int bonusAvancoExtra = 3;
-        const int penalidadeRecuo = 2;
-
-        while (true)
-        {
-            int posicaoJogador = 0;
-            int posicaoComputador = 0;
-            Console.Clear();
-
-            while (true)
-            {
-                //1. Rodada do Jogador
-                posicaoJogador = ExecutarRodadaDoJogador( //posicaoJogador está recebendo o retorno desse método
-                    posicaoJogador,
-                    limiteLinhaChegada,
-                    bonusAvancoExtra,
-                    penalidadeRecuo); //execuntado o método
-
-
-                //2. Check de vitória do jogador
-                ApresentarMensagemJogador(posicaoJogador, limiteLinhaChegada);
-
-                if (posicaoJogador >= limiteLinhaChegada)
-                    break;
-
-                //3. Rodada do Computador
-                posicaoComputador = ExecutarRodadaDoComputador(
-                    posicaoComputador,
-                    limiteLinhaChegada,
-                    bonusAvancoExtra,
-                    penalidadeRecuo);
-
-                //4. Check vitória do computador
-                ApresentarMensagemComputador(posicaoComputador, limiteLinhaChegada);
-                if (posicaoComputador >= limiteLinhaChegada)
-                    break;
-            }
-
-            Console.Write("Deseja continuar? s/N");
-            string? opcaoContinuar = Console.ReadLine()?.ToUpper(); //avisando ao compilador que a variável pode ser nula
-
-            if (opcaoContinuar != "S")
-                break;
-        }
-    }
-
-    //definindo um método chamado ExecutarRodadaDoJogador
-    static int ExecutarRodadaDoJogador( //método void não retorna nada
+    public static int ExecutarRodada( //método void não retorna nada
         int posicaoJogador,
         int limiteLinhaChegada,
         int bonusAvancoExtra,
@@ -91,11 +41,13 @@ class Program
             posicaoJogador -= penalidadeRecuo;
             Console.WriteLine($"\nVocê está na posição {posicaoJogador} de {limiteLinhaChegada}.");
         }
+        ApresentarMensagem(posicaoJogador, limiteLinhaChegada);
+
         return posicaoJogador;
     }
     //método de ponto de entrada
 
-    static void ApresentarMensagemJogador(
+    private static void ApresentarMensagem(
         int posicaoJogador,
         int limiteLinhaChegada
         )
@@ -115,6 +67,56 @@ class Program
         }
 
     }
+
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        const int limiteLinhaChegada = 30;
+        const int bonusAvancoExtra = 3;
+        const int penalidadeRecuo = 2;
+
+        while (true)
+        {
+            int posicaoJogador = 0;
+            int posicaoComputador = 0;
+            Console.Clear();
+
+            while (true)
+            {
+                //1. Rodada do Jogador
+                posicaoJogador = Jogador.ExecutarRodada( //posicaoJogador está recebendo o retorno desse método
+                    posicaoJogador,
+                    limiteLinhaChegada,
+                    bonusAvancoExtra,
+                    penalidadeRecuo); //execuntado o método
+
+                if (posicaoJogador >= limiteLinhaChegada)
+                    break;
+
+                //3. Rodada do Computador
+                posicaoComputador = ExecutarRodadaDoComputador(
+                    posicaoComputador,
+                    limiteLinhaChegada,
+                    bonusAvancoExtra,
+                    penalidadeRecuo);
+
+                //4. Check vitória do computador
+                ApresentarMensagemComputador(posicaoComputador, limiteLinhaChegada);
+                if (posicaoComputador >= limiteLinhaChegada)
+                    break;
+            }
+
+            Console.Write("Deseja continuar? s/N");
+            string? opcaoContinuar = Console.ReadLine()?.ToUpper(); //avisando ao compilador que a variável pode ser nula
+
+            if (opcaoContinuar != "S")
+                break;
+        }
+    }
+
+    //definindo um método chamado ExecutarRodadaDoJogador
 
     static int ExecutarRodadaDoComputador(
          int posicaoComputador,
