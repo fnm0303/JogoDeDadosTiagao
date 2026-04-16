@@ -69,61 +69,15 @@ class Jogador
     }
 
 }
-class Program
+
+class Computador
 {
-    static void Main(string[] args)
-    {
-        const int limiteLinhaChegada = 30;
-        const int bonusAvancoExtra = 3;
-        const int penalidadeRecuo = 2;
-
-        while (true)
-        {
-            int posicaoJogador = 0;
-            int posicaoComputador = 0;
-            Console.Clear();
-
-            while (true)
-            {
-                //1. Rodada do Jogador
-                posicaoJogador = Jogador.ExecutarRodada( //posicaoJogador está recebendo o retorno desse método
-                    posicaoJogador,
-                    limiteLinhaChegada,
-                    bonusAvancoExtra,
-                    penalidadeRecuo); //execuntado o método
-
-                if (posicaoJogador >= limiteLinhaChegada)
-                    break;
-
-                //3. Rodada do Computador
-                posicaoComputador = ExecutarRodadaDoComputador(
-                    posicaoComputador,
-                    limiteLinhaChegada,
-                    bonusAvancoExtra,
-                    penalidadeRecuo);
-
-                //4. Check vitória do computador
-                ApresentarMensagemComputador(posicaoComputador, limiteLinhaChegada);
-                if (posicaoComputador >= limiteLinhaChegada)
-                    break;
-            }
-
-            Console.Write("Deseja continuar? s/N");
-            string? opcaoContinuar = Console.ReadLine()?.ToUpper(); //avisando ao compilador que a variável pode ser nula
-
-            if (opcaoContinuar != "S")
-                break;
-        }
-    }
-
-    //definindo um método chamado ExecutarRodadaDoJogador
-
-    static int ExecutarRodadaDoComputador(
-         int posicaoComputador,
-         int limiteLinhaChegada,
-         int bonusAvancoExtra,
-         int penalidadeRecuo
-        )
+    public static int ExecutarRodada(
+             int posicaoComputador,
+             int limiteLinhaChegada,
+             int bonusAvancoExtra,
+             int penalidadeRecuo
+            )
     {
         //Console.Clear();
         Console.WriteLine("------------------------");
@@ -161,10 +115,11 @@ class Program
             posicaoComputador -= penalidadeRecuo;
             Console.WriteLine($"\nComputador está na posição {posicaoComputador} de {limiteLinhaChegada}.");
         }
+        ApresentarMensagem(posicaoComputador, limiteLinhaChegada);
         return posicaoComputador;
     }
 
-    static void ApresentarMensagemComputador(
+    private static void ApresentarMensagem(
         int posicaoComputador,
         int limiteLinhaChegada
         )
@@ -181,6 +136,51 @@ class Program
             Console.WriteLine("------------------------");
             Console.WriteLine("Pressione ENTER para continuar...");
             Console.ReadLine();
+        }
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        const int limiteLinhaChegada = 30;
+        const int bonusAvancoExtra = 3;
+        const int penalidadeRecuo = 2;
+
+        while (true)
+        {
+            int posicaoJogador = 0;
+            int posicaoComputador = 0;
+            Console.Clear();
+
+            while (true)
+            {
+                //1. Rodada do Jogador
+                posicaoJogador = Jogador.ExecutarRodada( //posicaoJogador está recebendo o retorno desse método
+                    posicaoJogador,
+                    limiteLinhaChegada,
+                    bonusAvancoExtra,
+                    penalidadeRecuo); //execuntado o método
+
+                if (posicaoJogador >= limiteLinhaChegada)
+                    break;
+
+                //3. Rodada do Computador
+                posicaoComputador = Computador.ExecutarRodada(
+                    posicaoComputador,
+                    limiteLinhaChegada,
+                    bonusAvancoExtra,
+                    penalidadeRecuo);
+
+                if (posicaoComputador >= limiteLinhaChegada)
+                    break;
+            }
+
+            Console.Write("Deseja continuar? s/N");
+            string? opcaoContinuar = Console.ReadLine()?.ToUpper(); //avisando ao compilador que a variável pode ser nula
+
+            if (opcaoContinuar != "S")
+                break;
         }
     }
 
