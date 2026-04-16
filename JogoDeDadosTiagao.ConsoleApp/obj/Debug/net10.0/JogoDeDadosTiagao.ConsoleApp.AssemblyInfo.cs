@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JogoDeDadosTiagao.ConsoleApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+964e73243458fe7d1d0be330ebcac6d5f9d59e29")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+366f0421eed30dc09964c6e65f59ea970bed8539")]
 [assembly: System.Reflection.AssemblyProductAttribute("JogoDeDadosTiagao.ConsoleApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JogoDeDadosTiagao.ConsoleApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
