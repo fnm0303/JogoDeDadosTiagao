@@ -1,7 +1,6 @@
+namespace JodoDeDadosTiagao.ConsoleApp.Entidades;
+
 using System.Security.Cryptography;
-
-namespace JodoDeDadosTiagao.ConsoleApp;
-
 public class Computador
 {
     public static int ExecutarRodada(

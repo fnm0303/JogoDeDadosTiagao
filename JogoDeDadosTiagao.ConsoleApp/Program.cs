@@ -1,5 +1,6 @@
 ﻿namespace JodoDeDadosTiagao.ConsoleApp;
 
+using JodoDeDadosTiagao.ConsoleApp.Entidades;
 class Program
 {
     static void Main(string[] args)

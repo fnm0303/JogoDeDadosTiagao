@@ -1,7 +1,6 @@
+namespace JodoDeDadosTiagao.ConsoleApp.Entidades;
+
 using System.Security.Cryptography;
-
-namespace JodoDeDadosTiagao.ConsoleApp;
-
 public class Jogador
 {
     public static int ExecutarRodada( //método void não retorna nada
