@@ -5,14 +5,11 @@ class Program
 {
     static void Main(string[] args)
     {
-
-
         while (true)
         {
-
-            int posicaoComputador = 0;
             Console.Clear();
-
+            Jogador.posicao = 0;
+            Computador.posicao = 0;
             while (true)
             {
                 //1. Rodada do Jogador
@@ -23,13 +20,9 @@ class Program
                     break;
 
                 //3. Rodada do Computador
-                posicaoComputador = Computador.ExecutarRodada(
-                    posicaoComputador,
-                    limiteLinhaChegada,
-                    bonusAvancoExtra,
-                    penalidadeRecuo);
+                Computador.ExecutarRodada();
 
-                if (posicaoComputador >= limiteLinhaChegada)
+                if (Computador.VenceuPartida())
                     break;
             }
 
