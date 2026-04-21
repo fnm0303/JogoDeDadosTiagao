@@ -5,26 +5,21 @@ class Program
 {
     static void Main(string[] args)
     {
-        const int limiteLinhaChegada = 30;
-        const int bonusAvancoExtra = 3;
-        const int penalidadeRecuo = 2;
+
 
         while (true)
         {
-            int posicaoJogador = 0;
+
             int posicaoComputador = 0;
             Console.Clear();
 
             while (true)
             {
                 //1. Rodada do Jogador
-                posicaoJogador = Jogador.ExecutarRodada( //posicaoJogador está recebendo o retorno desse método
-                    posicaoJogador,
-                    limiteLinhaChegada,
-                    bonusAvancoExtra,
-                    penalidadeRecuo); //execuntado o método
+                Jogador.ExecutarRodada(); //posicaoJogador está recebendo o retorno desse método
+                //execuntado o método
 
-                if (posicaoJogador >= limiteLinhaChegada)
+                if (Jogador.VenceuPartida())
                     break;
 
                 //3. Rodada do Computador

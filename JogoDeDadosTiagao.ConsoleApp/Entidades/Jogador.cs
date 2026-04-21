@@ -3,11 +3,11 @@ namespace JodoDeDadosTiagao.ConsoleApp.Entidades;
 using System.Security.Cryptography;
 public class Jogador
 {
-    public static int ExecutarRodada( //método void não retorna nada
-        int posicaoJogador,
-        int limiteLinhaChegada,
-        int bonusAvancoExtra,
-        int penalidadeRecuo)
+    public static int posicaoJogador = 0; //atributo (variável global)
+    const int limiteLinhaChegada = 30; //constantes já são estáticos por padrão.
+    const int bonusAvancoExtra = 3;
+    const int penalidadeRecuo = 2;
+    public static void ExecutarRodada() //método void não retorna nada
     {
         //1. Rodada do Jogador
         Console.WriteLine("------------------------");
@@ -42,16 +42,14 @@ public class Jogador
             posicaoJogador -= penalidadeRecuo;
             Console.WriteLine($"\nVocê está na posição {posicaoJogador} de {limiteLinhaChegada}.");
         }
-        ApresentarMensagem(posicaoJogador, limiteLinhaChegada);
-
-        return posicaoJogador;
+        ApresentarMensagem(limiteLinhaChegada);
     }
-    //método de ponto de entrada
 
-    private static void ApresentarMensagem(
-        int posicaoJogador,
-        int limiteLinhaChegada
-        )
+    public static bool VenceuPartida()
+    {
+        return posicaoJogador >= limiteLinhaChegada;
+    }
+    private static void ApresentarMensagem(int limiteLinhaChegada)
     {
         if (posicaoJogador >= limiteLinhaChegada)
         {
